@@ -30,7 +30,7 @@ class RecipeList extends Component{
         <ul id="recipe-list">
           {this.displayRecipes()}
         </ul>
-        <RecipeDetails bookId={this.state.selected}/>
+        <RecipeDetails recipeId={this.state.selected}/>
       </div>
     );
   }

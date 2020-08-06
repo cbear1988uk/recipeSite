@@ -14,11 +14,11 @@ class RecipeDetails extends Component{
           <p>{recipe.description}</p>
           <p>{recipe.description2}</p>
           <p>{recipe.description3}</p>
-          <p className="category">
+          <ul className="category">
             {recipe.category.recipes.map(item =>{
               return <li key={item.id}>{item.name}</li>
             })}
-          </p>
+          </ul>
         </div>
       )
     }else{
@@ -28,8 +28,10 @@ class RecipeDetails extends Component{
     }
   }
   render(){
+    console.log(this.props);
     return (
       <div id="recipe-details">
+        <p>Recipe details here: </p>
         {this.displayRecipeDetails()}
       </div>
     );
